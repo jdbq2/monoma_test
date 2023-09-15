@@ -4,7 +4,7 @@ Este repositorio corresponde con la prueba tecnica para frontend developer en Mo
 
 #### Enlace en produccion:
 
-www.llenar.com
+https://monoma-test-theta.vercel.app/
 
 #### Datos de acceso a la app:
 
@@ -86,7 +86,7 @@ Pantalla inicial, que recibe al usuario si no existe un token o un usuario guard
 
 ##### Ruta:
 
-www.app.com/auth/login
+https://monoma-test-theta.vercel.app/auth/login
 
 ##### Caracteristicas:
 
@@ -101,7 +101,7 @@ www.app.com/auth/login
 
 Pantalla donde se despliegan las tarjetas de los pokemons, el footer de la paginación y el header con las opciones del menú.
 #####Ruta:
-www.app.com/pokemons
+https://monoma-test-theta.vercel.app/pokemons
 
 ##### Caracteristicas:
 
@@ -113,7 +113,7 @@ www.app.com/pokemons
 
 Pantalla donde se despliegan el detalle de cada pokemon, para acceder a esta pantalla los datos y el token del usuario deben estar establecidos tanto en el estado global, como en el localStorage, caso contrario se hara el proceso de logout.
 #####Ruta:
-www.app.com/pokemon/{id o nombre del pokemon}
+https://monoma-test-theta.vercel.app/pokemon/{id o nombre del pokemon}
 
 ##### Caracteristicas:
 
@@ -123,7 +123,7 @@ www.app.com/pokemon/{id o nombre del pokemon}
 
 Pantalla donde se despliegan el detalle del usuario, para acceder a esta pantalla los datos y el token del usuario deben estar establecidos tanto en el estado global, como en el localStorage, caso contrario se hara el proceso de logout.
 #####Ruta:
-www.app.com/puser
+https://monoma-test-theta.vercel.app/user
 
 ##### Caracteristicas:
 
