@@ -1,9 +1,14 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 import { setUserAndToken } from "../slices/userSlice";
 
+const baseUrl =
+    process.env.NODE_ENV === "development"
+        ? "http://localhost:3005"
+        : `https://${process.env.VERCEL_URL}`;
+
 export const authApi = createApi({
     reducerPath: "authApi",
-    baseQuery: retry(fetchBaseQuery({ baseUrl: "http://localhost:3005" }), {
+    baseQuery: retry(fetchBaseQuery({ baseUrl: baseUrl }), {
         maxRetries: 0,
     }),
 
@@ -13,7 +18,7 @@ export const authApi = createApi({
             { email: string; password: string }
         >({
             query: ({ email, password }) => ({
-                url: `/login`,
+                url: `/api/login`,
                 method: "post",
                 body: { email, password },
             }),
