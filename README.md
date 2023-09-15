@@ -100,7 +100,9 @@ https://monoma-test-theta.vercel.app/auth/login
 #### Dashboard:
 
 Pantalla donde se despliegan las tarjetas de los pokemons, el footer de la paginación y el header con las opciones del menú.
-#####Ruta:
+
+##### Ruta:
+
 https://monoma-test-theta.vercel.app/pokemons
 
 ##### Caracteristicas:
@@ -112,7 +114,9 @@ https://monoma-test-theta.vercel.app/pokemons
 #### Pantalla de detalle de cada pokemon:
 
 Pantalla donde se despliegan el detalle de cada pokemon, para acceder a esta pantalla los datos y el token del usuario deben estar establecidos tanto en el estado global, como en el localStorage, caso contrario se hara el proceso de logout.
-#####Ruta:
+
+##### Ruta:
+
 https://monoma-test-theta.vercel.app/pokemon/{id o nombre del pokemon}
 
 ##### Caracteristicas:
@@ -122,7 +126,9 @@ https://monoma-test-theta.vercel.app/pokemon/{id o nombre del pokemon}
 #### Pantalla de detalle del usuario:
 
 Pantalla donde se despliegan el detalle del usuario, para acceder a esta pantalla los datos y el token del usuario deben estar establecidos tanto en el estado global, como en el localStorage, caso contrario se hara el proceso de logout.
-#####Ruta:
+
+##### Ruta:
+
 https://monoma-test-theta.vercel.app/user
 
 ##### Caracteristicas:
