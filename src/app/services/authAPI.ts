@@ -1,16 +1,16 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 import { setUserAndToken } from "../slices/userSlice";
 
-const baseUrl =
-    process.env.NODE_ENV === "development"
-        ? "http://localhost:3005"
-        : `https://${process.env.VERCEL_URL}`;
-
 export const authApi = createApi({
     reducerPath: "authApi",
-    baseQuery: retry(fetchBaseQuery({ baseUrl: baseUrl }), {
-        maxRetries: 0,
-    }),
+    baseQuery: retry(
+        fetchBaseQuery({
+            baseUrl: "https://json-server-vercel-jdbq2.vercel.app",
+        }),
+        {
+            maxRetries: 0,
+        }
+    ),
 
     endpoints: (builder) => ({
         loginUser: builder.mutation<

@@ -28,7 +28,7 @@ const PokemonCard: FC<Props> = ({ pokemon }) => {
                         Peso: {pokemon.weight} kg
                     </PokemonCardWeight>
                 </PokemonCardImageWrapper>
-                <PokemonCardName>{pokemon.name.toUpperCase()}</PokemonCardName>
+                <PokemonCardName>{pokemon.name}</PokemonCardName>
                 <PokemonCardAbility>
                     {pokemon.abilities.map((ability) => {
                         return `#${ability.ability.name} `;

@@ -5,7 +5,7 @@ describe("Login", () => {
         cy.visit("http://localhost:3000");
     });
     it("Muestra la pantalla de Login", () => {
-        cy.contains("Pokemon API");
+        cy.contains("PokeDex");
         cy.contains("Email");
         cy.contains("Contraseña");
         cy.contains("Iniciar sesión");

@@ -11,14 +11,31 @@ import { TitleBig } from "../styles/components/Fonts";
 import { useAppDispatch } from "../app/hooks/hooks";
 import { validateAuth } from "../app/slices/userSlice";
 import { useEffect } from "react";
+import { Circles } from "react-loader-spinner";
 
 const PokemonPage = () => {
     const dispatch = useAppDispatch();
     const { id } = useParams();
-    const { data } = useGetPokemonByIdQuery(id!);
+    const { data, isLoading } = useGetPokemonByIdQuery(id!);
     useEffect(() => {
         dispatch(validateAuth());
     }, []);
+
+    if (isLoading) {
+        return (
+            <PokemonPageWrapper>
+                <Circles
+                    height="80"
+                    width="80"
+                    color="#84cc16"
+                    ariaLabel="circles-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </PokemonPageWrapper>
+        );
+    }
 
     return (
         <>

@@ -5,7 +5,7 @@ import { LoginWrapper } from "../styles/components/PageWrappers";
 const LoginPage = () => {
     return (
         <LoginWrapper>
-            <TitleBig>Pokemon API</TitleBig>
+            <TitleBig>PokeDex</TitleBig>
             <LoginForm />
         </LoginWrapper>
     );

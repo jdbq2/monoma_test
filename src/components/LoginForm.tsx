@@ -40,7 +40,7 @@ const LoginForm: React.FC = () => {
             <Circles
                 height="80"
                 width="80"
-                color="#2563eb"
+                color="#84cc16"
                 ariaLabel="circles-loading"
                 wrapperStyle={{}}
                 wrapperClass=""
@@ -50,7 +50,7 @@ const LoginForm: React.FC = () => {
     }
 
     if (isSuccess) {
-        toast.success("🦄Bienvenido!!", {
+        toast.success("BIenvenido Maestro Pokemon!!", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -84,7 +84,7 @@ const LoginForm: React.FC = () => {
                         required: "Este Campo es obligatorio",
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: "Invalid email address",
+                            message: "No es una direccion de email valida",
                         },
                     })}
                     type="text"

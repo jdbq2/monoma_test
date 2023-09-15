@@ -53,7 +53,7 @@ const DashboardPage = () => {
                     <Circles
                         height="80"
                         width="80"
-                        color="#2563eb"
+                        color="#84cc16"
                         ariaLabel="circles-loading"
                         wrapperStyle={{}}
                         wrapperClass=""
