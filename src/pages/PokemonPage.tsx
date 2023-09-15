@@ -31,6 +31,7 @@ const PokemonPage = () => {
                                 data.sprites.front_default
                             }
                             alt={data.name}
+                            id="detail-pokemon-image"
                         />
                     </PokemonDetailImageWrapper>
                     <PokemonDetailTextWrapper>

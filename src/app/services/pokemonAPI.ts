@@ -1,9 +1,4 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
-import {
-    Pokemon,
-    PokemonPaginationResponse,
-    PokemonTransformedResponse,
-} from "../../../types/types";
 import { fetchAllData } from "../../helpers/fetchData";
 
 export const pokemonApi = createApi({

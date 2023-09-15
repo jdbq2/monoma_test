@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
-import { LoginResponse } from "../../../types/types";
 import { setUserAndToken } from "../slices/userSlice";
 
 export const authApi = createApi({

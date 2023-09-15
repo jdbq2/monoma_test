@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { User } from "../../types/types";
 import { useAppDispatch } from "../app/hooks/hooks";
 import { validateAuth } from "../app/slices/userSlice";
 import { TitleBig } from "../styles/components/Fonts";
@@ -23,7 +22,11 @@ const UserPage = () => {
             {user && (
                 <UserPageWrapper>
                     <UserDetailImageWrapper>
-                        <UserDetailImage src={user.image} alt={user.name} />
+                        <UserDetailImage
+                            src={user.image}
+                            alt={user.name}
+                            id="user-image"
+                        />
                     </UserDetailImageWrapper>
                     <UserDetailTextWrapper>
                         <TitleBig>{user.name}</TitleBig>

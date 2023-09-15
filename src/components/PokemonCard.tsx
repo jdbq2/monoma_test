@@ -1,5 +1,4 @@
 import { FC, Key } from "react";
-import { Pokemon } from "../../types/types";
 import {
     CardWrapper,
     PokemonCardAbility,

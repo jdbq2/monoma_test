@@ -23,7 +23,7 @@ const HeaderMenu = () => {
 
     return (
         <DropdownMenuWrapper onClick={() => toggleDropdown()}>
-            <DropdownMenuMainOption>
+            <DropdownMenuMainOption id="main-menu-button">
                 {isDropdownOpen ? (
                     <MdClose color={"white"} style={{ fontSize: "1.5rem" }} />
                 ) : (

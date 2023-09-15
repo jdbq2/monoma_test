@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Circles } from "react-loader-spinner";
 import { useLoginUserMutation } from "../app/services/authAPI";
-import { LoginData } from "../../types/types";
+
 import {
     Form,
     InputLabel,
@@ -124,7 +124,9 @@ const LoginForm: React.FC = () => {
                 </ShowPWButton>
             </InputWrapper>
             <InputWrapper>
-                <SubmitButton>Iniciar sesión</SubmitButton>
+                <SubmitButton id="login-submit-button">
+                    Iniciar sesión
+                </SubmitButton>
             </InputWrapper>
         </Form>
     );

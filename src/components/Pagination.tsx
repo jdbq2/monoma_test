@@ -26,7 +26,11 @@ const Pagination: FC<Props> = ({
 }) => {
     return (
         <PaginationWrapper>
-            <PaginationButton onClick={handleBack} disabled={isBackDisabled}>
+            <PaginationButton
+                onClick={handleBack}
+                disabled={isBackDisabled}
+                id="pagination-back"
+            >
                 <MdChevronLeft color={"white"} style={{ fontSize: "1.5rem" }} />
             </PaginationButton>
             <HeaderTitle>
@@ -35,6 +39,7 @@ const Pagination: FC<Props> = ({
             <PaginationButton
                 onClick={handleAdvance}
                 disabled={isFrontDisabled}
+                id="pagination-front"
             >
                 <MdChevronRight
                     color={"white"}

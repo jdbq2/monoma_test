@@ -6,7 +6,6 @@ import {
 } from "../styles/components/PageWrappers";
 import Pagination from "../components/Pagination";
 import PokemonCard from "../components/PokemonCard";
-import { Pokemon } from "../../types/types";
 import { Circles } from "react-loader-spinner";
 
 const DashboardPage = () => {
@@ -49,7 +48,7 @@ const DashboardPage = () => {
 
     return (
         <DashboardPageWrapper>
-            <DasboardCardsWrapper>
+            <DasboardCardsWrapper id="cards-wrapper">
                 {isLoading && (
                     <Circles
                         height="80"

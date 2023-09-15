@@ -1,15 +1,15 @@
 // TYPES DEL LOGIN Y USUARIO
-export type LoginData = {
+declare type LoginData = {
     email: string;
     password: string;
 };
 
-export interface LoginResponse {
+declare interface LoginResponse {
     message: string;
     user: User;
 }
 
-export interface User {
+declare interface User {
     id: string;
     name: string;
     email: string;
@@ -21,24 +21,24 @@ export interface User {
 
 // TYPES DE LAS PETICIONES A LA API DE POKEMON
 
-export interface PokemonPaginationResponse {
+declare interface PokemonPaginationResponse {
     count: number;
     next: string;
     previous: null;
     results: Result[];
 }
 
-export interface PokemonTransformedResponse {
+declare interface PokemonTransformedResponse {
     count: string;
     pokemons: Pokemon[];
 }
 
-export interface Result {
+declare interface Result {
     name: string;
     url: string;
 }
 
-export interface Pokemon {
+declare interface Pokemon {
     abilities: Ability[];
     base_experience: number;
     forms: Species[];
@@ -59,44 +59,44 @@ export interface Pokemon {
     weight: number;
 }
 
-export interface Ability {
+declare interface Ability {
     ability: Species;
     is_hidden: boolean;
     slot: number;
 }
 
-export interface Species {
+declare interface Species {
     name: string;
     url: string;
 }
 
-export interface GameIndex {
+declare interface GameIndex {
     game_index: number;
     version: Species;
 }
 
-export interface Move {
+declare interface Move {
     move: Species;
     version_group_details: VersionGroupDetail[];
 }
 
-export interface VersionGroupDetail {
+declare interface VersionGroupDetail {
     level_learned_at: number;
     move_learn_method: Species;
     version_group: Species;
 }
 
-export interface GenerationV {
+declare interface GenerationV {
     "black-white": Sprites;
 }
 
-export interface GenerationIv {
+declare interface GenerationIv {
     "diamond-pearl": Sprites;
     "heartgold-soulsilver": Sprites;
     platinum: Sprites;
 }
 
-export interface Versions {
+declare interface Versions {
     "generation-i": GenerationI;
     "generation-ii": GenerationIi;
     "generation-iii": GenerationIii;
@@ -107,7 +107,7 @@ export interface Versions {
     "generation-viii": GenerationViii;
 }
 
-export interface Sprites {
+declare interface Sprites {
     back_default: string;
     back_female: null;
     back_shiny: string;
@@ -121,12 +121,12 @@ export interface Sprites {
     animated?: Sprites;
 }
 
-export interface GenerationI {
+declare interface GenerationI {
     "red-blue": RedBlue;
     yellow: RedBlue;
 }
 
-export interface RedBlue {
+declare interface RedBlue {
     back_default: string;
     back_gray: string;
     back_transparent: string;
@@ -135,13 +135,13 @@ export interface RedBlue {
     front_transparent: string;
 }
 
-export interface GenerationIi {
+declare interface GenerationIi {
     crystal: Crystal;
     gold: Gold;
     silver: Gold;
 }
 
-export interface Crystal {
+declare interface Crystal {
     back_default: string;
     back_shiny: string;
     back_shiny_transparent: string;
@@ -152,7 +152,7 @@ export interface Crystal {
     front_transparent: string;
 }
 
-export interface Gold {
+declare interface Gold {
     back_default: string;
     back_shiny: string;
     front_default: string;
@@ -160,51 +160,51 @@ export interface Gold {
     front_transparent?: string;
 }
 
-export interface GenerationIii {
+declare interface GenerationIii {
     emerald: OfficialArtwork;
     "firered-leafgreen": Gold;
     "ruby-sapphire": Gold;
 }
 
-export interface OfficialArtwork {
+declare interface OfficialArtwork {
     front_default: string;
     front_shiny: string;
 }
 
-export interface Home {
+declare interface Home {
     front_default: string;
     front_female: null;
     front_shiny: string;
     front_shiny_female: null;
 }
 
-export interface GenerationVii {
+declare interface GenerationVii {
     icons: DreamWorld;
     "ultra-sun-ultra-moon": Home;
 }
 
-export interface DreamWorld {
+declare interface DreamWorld {
     front_default: string;
     front_female: null;
 }
 
-export interface GenerationViii {
+declare interface GenerationViii {
     icons: DreamWorld;
 }
 
-export interface Other {
+declare interface Other {
     dream_world: DreamWorld;
     home: Home;
     "official-artwork": OfficialArtwork;
 }
 
-export interface Stat {
+declare interface Stat {
     base_stat: number;
     effort: number;
     stat: Species;
 }
 
-export interface Type {
+declare interface Type {
     slot: number;
     type: Species;
 }
