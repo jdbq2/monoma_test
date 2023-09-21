@@ -16,6 +16,7 @@ import {
 
 const LoginForm: React.FC = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const [canDisplayErrorToast, setCanDisplayErrorToast] = useState(false);
     const {
         register,
         handleSubmit,
@@ -32,6 +33,7 @@ const LoginForm: React.FC = () => {
         useLoginUserMutation();
 
     const onSubmit: SubmitHandler<LoginData> = (data) => {
+        setCanDisplayErrorToast(true);
         loginUser(data);
     };
 
@@ -50,29 +52,33 @@ const LoginForm: React.FC = () => {
     }
 
     if (isSuccess) {
-        toast.success("BIenvenido Maestro Pokemon!!", {
+        toast.success("Bienvenido Maestro Pokemon!!", {
             position: "top-center",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            progress: undefined,
             theme: "light",
         });
     }
     if (isError) {
-        //@ts-ignore
-        toast.error(`${error.data.error}`, {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
+        if (!toast.isActive("error-toast") && canDisplayErrorToast) {
+            //@ts-ignore
+            toast.error(`${error.data.error}`, {
+                toastId: "error-toast",
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "light",
+                onClose: () => {
+                    setCanDisplayErrorToast(false);
+                },
+            });
+        }
     }
 
     return (
